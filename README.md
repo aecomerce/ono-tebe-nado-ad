@@ -6,10 +6,6 @@
 
 [GitHub Pages](https://aecomerce.github.io/ono-tebe-nado-ad/)
 
-## 📝 Автор
-
-Феслер Аркадий
-
 ## 🛠 Технологии
 
 - HTML5
