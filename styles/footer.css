@@ -1,0 +1,39 @@
+.footer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 148px 49px 88px 52px;
+}
+
+.footer__menu {
+    justify-self: center;
+    text-align: center;
+}
+
+.footer__menu-list {
+    list-style: none;
+
+}
+
+.footer__menu-link {
+    text-decoration: underline;
+}
+
+.footer__menu-link_active {
+    text-decoration: none;
+}
+
+.footer__social-list {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    justify-self: end;
+
+}
+
+.footer__social_icon {
+    height: 48px;
+    width: 48px;
+}
