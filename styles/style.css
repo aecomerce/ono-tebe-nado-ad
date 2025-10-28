@@ -1,16 +1,9 @@
-/* Общие стили */
-.content-section {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
 /* Хедер */
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 92px 50px;
+    padding: 92px 50px 88px;
     margin: 0 auto;
 }
 
@@ -20,14 +13,10 @@
 
 .header__links-list {
     display: flex;
-    gap: 32px;
-    list-style: circle;
+    gap: 28px;
+    list-style: none;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
-}
-
-.header__links-list-item_no-bullit {
-    list-style: none;
 }
 
 .header__link_active {
@@ -36,8 +25,8 @@
 
 .header__logo {
     display: block;
-    width: 148px;
-    height: 105px;
+    width: 135px;
+    height: auto;
 }
 
 .header__logo-image {
@@ -64,7 +53,7 @@
 /* Обложка */
 .cover {
     position: relative;
-    padding: 165px 50px 50px;
+    padding: 165px 50px 60px;
     background-image: url(../images/cover.jpg);
     background-size: cover;
     background-position: center;
@@ -73,68 +62,41 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background-color: #000;
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 .cover__title {
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-bottom: 135px;
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
+    gap: 15px;
     font-size: 100px;
     font-weight: 700;
-    line-height: 1.15;
     text-transform: uppercase;
-    letter-spacing: normal; /* Сбрасываем общее расстояние */
+    color: #fff;
+    z-index: 2;
+    position: relative;
 }
 
+/* Первая строка — левое выравнивание */
 .aligned-text {
-    display: block;
-}
-
-/* Первая строка - ОНО */
-.aligned-text:first-child {
-    text-align: left;
-    line-height: 115%;
+    align-self: flex-start;
     letter-spacing: 30px;
 }
 
-.aligned-text:first-child .letter-spacing-extended {
-    letter-spacing: 30px; /* Для "НО" в первом слове */
-}
-
-/* Вторая строка - ТЕБЕ */
+/* Вторая строка — строго по центру */
 .aligned-text_center {
-    text-align: center;
-    line-height: 100%;
-    margin-left: 60px;
+    align-self: center;
     letter-spacing: 30px;
 }
 
-.aligned-text_center .letter-spacing-extended {
-    letter-spacing: 30px; /* Для "БЕ" во втором слове */
-}
-
-/* Третья строка - НАДО */
+/* Третья строка — сдвинута вправо, чтобы "Н" была под "Е" */
 .aligned-text_right {
-    text-align: right;
-    line-height: 100%;
-    margin-right: 30px;
+    align-self: flex-end;
     letter-spacing: 30px;
+    margin-right: 19px; /* подгоняем вручную — идеально на 1100px ширине */
 }
 
-.aligned-text_right .letter-spacing-extended {
-    letter-spacing: 30px; /* Для "НА" в третьем слове */
-}
-
-.letter-spacing-extended {
-    /* Это класс теперь используется только для выделения букв,
-       но фактическое расстояние задается в родительских элементах */
-}
+.letter-spacing-extended {}
 
 .no-letter-spacing {
     letter-spacing: 0;
@@ -146,6 +108,7 @@
     justify-content: end;
     align-items: center;
     gap: 78px;
+    margin-top: 20px;
 }
 
 .cover__description-text {
@@ -155,6 +118,7 @@
     line-height: 1.27;
     text-transform: uppercase;
     word-spacing: 18px;
+    font-weight: 400;
 }
 
 .bet-button {
@@ -166,6 +130,7 @@
     text-transform: uppercase;
     background: transparent;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .bet-button:hover {
@@ -175,12 +140,12 @@
 
 /* Лоты */
 .lots {
-    padding: 0 50px;
-    margin-top: 180px;
+    padding: 0 20px;
+    margin-top: 160px;
 }
 
 .lots__title {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
     padding-left: 40px;
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
@@ -191,7 +156,7 @@
 .cards-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 20px;
     margin-bottom: 30px;
     list-style: none;
 }
@@ -260,17 +225,17 @@
 .about {
     display: grid;
     grid-template-columns: 240px 1fr;
-    gap: 25px;
+    gap: 50px;
     padding: 0 50px;
-    margin-top: 180px;
+    margin-top: 160px;
 }
 
 .about__logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background-color: #000;
 }
@@ -280,11 +245,11 @@
 }
 
 .about__column {
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .about__title {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
     font-weight: 700;
@@ -305,7 +270,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding: 180px 50px 90px;
+    padding: 120px 50px 90px;
     margin: 0 auto;
 }
 
@@ -338,7 +303,7 @@
     height: 48px;
 }
 
-/* Ховер эффекты для ссылок */
+/* Ховер эффекты */
 .header__link:hover,
 .address__contacts-link:hover,
 .lots__look-more-link:hover,
