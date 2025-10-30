@@ -1,6 +1,5 @@
 .header {
     display:grid;
-    /*    gap:10px;*/
     grid-template-columns: 1fr 130px 1fr;
     grid-template-rows: 105px;
     align-items:center;
